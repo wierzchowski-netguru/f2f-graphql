@@ -1,0 +1,373 @@
+_type: export
+__export_format: 4
+__export_date: 2019-05-18T13:59:54.979Z
+__export_source: insomnia.desktop.app:v6.5.3
+resources:
+  - _id: req_4d6b0a22fa524e6dad4819042a548960
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  register (username: \"kazik\", password:
+        \"1234\") {\n    user
+        {\n      id\n      username\n      isStaff\n    }\n  }\n}\n"}'
+    created: 1558179516470
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779605037
+    method: POST
+    modified: 1558179938012
+    name: v1/register
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v1/
+    _type: request
+  - _id: wrk_5ec86768442e4fae8b11e3b1027dde62
+    created: 1555778397788
+    description: ""
+    modified: 1555778397788
+    name: Insomnia
+    parentId: null
+    _type: workspace
+  - _id: req_c963ec8cf9ed4f81965c6b6fdae6e5ff
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  tokenAuth (username: \"kazik\", password:
+        \"1234\") {\n    \ttoken\n    }\n  }\n"}'
+    created: 1558179973511
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779605012
+    method: POST
+    modified: 1558180222110
+    name: v1/login
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v1/
+    _type: request
+  - _id: req_70122a82fb7a4a208e197ba1ca50a0fb
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n  me {\n    id\n    username\n    isStaff\n    posts
+        {\n      id\n      text\n    }\n    threads
+        {\n      id\n      name\n    }\n  }\n}\n"}'
+    created: 1555779604937
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604999.5
+    method: POST
+    modified: 1558180084765
+    name: v1/me
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v1/
+    _type: request
+  - _id: req_c39e4e508e7f48d0a4a188c8c528354f
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n  users {\n    id\n    username\n    isStaff\n\t}\n}\n"}'
+    created: 1558178083367
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604987
+    method: POST
+    modified: 1558179247173
+    name: v1/all-users
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v1/
+    _type: request
+  - _id: req_8cedca2bc4e04bb387bc46606c35580a
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n  forums {\n    id\n    name\n    threads
+        {\n      id\n      name\n      user
+        {\n        id\n        username\n      }\n      posts
+        {\n        id\n        text\n        user
+        {\n          id,\n          username\n        }\n      }\n    }\n  }\n}\n"}'
+    created: 1558177762042
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604887
+    method: POST
+    modified: 1558178924488
+    name: v1/all-forums-threads-posts
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v1/
+    _type: request
+  - _id: req_f7f8643ac42340bba026433bbeb5ea4f
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  createThread (forumId: 1, name:
+        \"new_forum_name\", text: \"post text for thread\")
+        {\n    id\n    name\n    firstPost {\n      id\n      text\n      user
+        {\n        id\n        username\n      }\n    }\n    }\n  }\n"}'
+    created: 1558180224911
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604837
+    method: POST
+    modified: 1558180257513
+    name: v1/create-thread
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v1/
+    _type: request
+  - _id: req_8f76149d96a2417d9c541c06aab0a2e5
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  createPost (threadId: 6, text: \"next post in
+        thread\") {\n    id\n    text\n    user
+        {\n      id\n      username\n    }\n  }\n}\n"}'
+    created: 1558180268440
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604787
+    method: POST
+    modified: 1558180426188
+    name: v1/create-post
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v1/
+    _type: request
+  - _id: req_1f210f9a960448118414feac8faedc0c
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  register(input: {username: \"tymek\", password:
+        \"1234\"}) {\n    id\n    username\n  }\n}\n"}'
+    created: 1558186487818
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604762
+    method: POST
+    modified: 1558186706728
+    name: v2/register
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v2/
+    _type: request
+  - _id: req_866c5d43ddc948f196fdd35ec6cf4dc3
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"mutation {\n  tokenAuth (username: \"kazik\", password:
+        \"1234\") {\n    \ttoken\n    }\n  }\n"}'
+    created: 1558186535779
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604749.5
+    method: POST
+    modified: 1558186548805
+    name: v2/login
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v2/
+    _type: request
+  - _id: req_c3486c54df254548b77f743850b780ba
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n  users {\n    edges {\n      node
+        {\n        id\n        username\n      }\n    }\n  }\n}\n"}'
+    created: 1558183593368
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604737
+    method: POST
+    modified: 1558183615189
+    name: v2/all-users
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v2/
+    _type: request
+  - _id: req_1ca951e7c5d74674b42b29cc6fb89066
+    authentication:
+      prefix: JWT
+      token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InNlYmEiLCJleHAiOjE1NTc4MzcwOTcsIm9yaWdJYXQiOjE1NTc4MzY3OTd9.JLdGKnxucTLv39rVjnUV9_HAEcYKT8coUn7En2NFEEk
+      type: bearer
+    body:
+      mimeType: application/graphql
+      text: '{"query":"{\n  forums (id: \"Rm9ydW1Ob2RlOjI=\") {\n    edges
+        {\n      node {\n        id\n        name\n        threads
+        {\n          edges {\n            node
+        {\n              id\n              name\n              user
+        {\n                id\n                username\n              }\n              posts
+        {\n                edges {\n                  node
+        {\n                    id\n                    text\n                    user
+        {\n                      id\n                      username\n                    }\n                  }\n                }\n              }\n            }\n          }\n        }\n      }\n    }\n  }\n}\n"}'
+    created: 1558183637747
+    description: ""
+    headers:
+      - id: pair_8e0965fec96b4325bb2d43210065a730
+        name: Content-Type
+        value: application/json
+    isPrivate: false
+    metaSortKey: -1555779604687
+    method: POST
+    modified: 1558184292722
+    name: v2/all-forums-threads-posts
+    parameters: []
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingSendCookies: true
+    settingStoreCookies: true
+    url: http://127.0.0.1:8000/graphql/v2/
+    _type: request
+  - _id: env_d2f589c5e21d45158fb8c46293202c15
+    color: null
+    created: 1555778397821
+    data: {}
+    isPrivate: false
+    metaSortKey: 1555778397821
+    modified: 1555778397821
+    name: New Environment
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    _type: environment
+  - _id: jar_76d512b8092a409a9530c64d187c4806
+    cookies:
+      - creation: 2019-04-20T17:03:46.690Z
+        domain: 127.0.0.1
+        expires: 2020-05-16T13:38:13.000Z
+        extensions:
+          - SameSite=Lax
+        hostOnly: true
+        id: "2997769915502817"
+        key: csrftoken
+        lastAccessed: 2019-05-18T13:38:13.731Z
+        maxAge: 31449600
+        path: /
+        value: hMtTe7mZ6osAfjfyWHJlka41AQ0Sgr4JJRWp6z8foWoh5GEHOi9I8PNUmd8UQSYE
+    created: 1555778397824
+    modified: 1558186693731
+    name: Default Jar
+    parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
+    _type: cookie_jar

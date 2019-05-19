@@ -1,0 +1,132 @@
+- model: core.forum
+  pk: 1
+  fields:
+    name: GRADUATE
+- model: core.forum
+  pk: 2
+  fields:
+    name: INTERNSHIP
+- model: core.forum
+  pk: 3
+  fields:
+    name: GENERAL
+- model: core.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$150000$ljKCEcTkojxw$TNN8wUz413BEmVkC2zJrMqPaIipz227RlRubJLr8zjI=
+    last_login: 2019-05-18 10:52:59+00:00
+    is_superuser: true
+    username: seba
+    first_name: Sebastian
+    last_name: Wierzchowski
+    email: seba@wp.pl
+    is_staff: true
+    is_active: true
+    date_joined: 2019-04-20 11:34:51+00:00
+    created_at: 2019-04-20 11:34:51.564000+00:00
+    groups: []
+    user_permissions: []
+- model: core.user
+  pk: 2
+  fields:
+    password: pbkdf2_sha256$150000$DxqjZ25PZLhL$6lZZ4v3mmZ2IrGGV09GGBfmCL70sa8Bn5gxS3VK7QyY=
+    last_login: 2019-05-18 10:59:02+00:00
+    is_superuser: false
+    username: mietek
+    first_name: Mietek
+    last_name: Szczesniak
+    email: mietek@wp.pl
+    is_staff: false
+    is_active: true
+    date_joined: 2019-05-18 10:59:03+00:00
+    created_at: 2019-05-18 10:58:42.588033+00:00
+    groups: []
+    user_permissions: []
+- model: core.user
+  pk: 3
+  fields:
+    password: pbkdf2_sha256$150000$9RWjrJCbdcLt$rgXjoBSzzOtr8ZTiDZic6G8YNBJmsnA+X3hJFq/bO9w=
+    last_login: 2019-05-18 10:59:36+00:00
+    is_superuser: false
+    username: edek
+    first_name: Edward
+    last_name: Nozycoreki
+    email: edek@wp.pl
+    is_staff: false
+    is_active: true
+    date_joined: 2019-05-18 10:59:32+00:00
+    created_at: 2019-05-18 10:59:32.699201+00:00
+    groups: []
+    user_permissions: []
+- model: core.thread
+  pk: 1
+  fields:
+    created_at: 2019-05-18 11:00:27.082246+00:00
+    name: Watek seby
+    forum: 1
+    user: 1
+    views: 33
+    followers:
+    - 2
+    - 3
+- model: core.thread
+  pk: 2
+  fields:
+    created_at: 2019-05-18 11:00:40.891657+00:00
+    name: Watek edka
+    forum: 1
+    user: 3
+    views: 23
+    followers:
+    - 2
+- model: core.thread
+  pk: 3
+  fields:
+    created_at: 2019-05-18 11:00:55.388300+00:00
+    name: Watek mietka
+    forum: 2
+    user: 2
+    views: 1
+    followers: []
+- model: core.post
+  pk: 1
+  fields:
+    created_at: 2019-05-18 11:01:29.559583+00:00
+    text: elo 320
+    thread: 3
+    user: 2
+    users_mentioned: []
+    users_quoted: []
+    starred_by:
+    - 1
+- model: core.post
+  pk: 2
+  fields:
+    created_at: 2019-05-18 11:04:07.244526+00:00
+    text: edek pisze
+    thread: 2
+    user: 3
+    users_mentioned: []
+    users_quoted: []
+    starred_by: []
+- model: core.post
+  pk: 3
+  fields:
+    created_at: 2019-05-18 11:04:15.350854+00:00
+    text: sebaseba
+    thread: 1
+    user: 1
+    users_mentioned: []
+    users_quoted: []
+    starred_by: []
+- model: core.post
+  pk: 4
+  fields:
+    created_at: 2019-05-18 11:04:33.063742+00:00
+    text: seba odpowiada
+    thread: 3
+    user: 1
+    users_mentioned: []
+    users_quoted: []
+    starred_by:
+    - 3
