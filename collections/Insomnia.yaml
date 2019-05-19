@@ -1,6 +1,6 @@
 _type: export
 __export_format: 4
-__export_date: 2019-05-18T13:59:54.979Z
+__export_date: 2019-05-19T15:30:41.341Z
 __export_source: insomnia.desktop.app:v6.5.3
 resources:
   - _id: req_4d6b0a22fa524e6dad4819042a548960
@@ -227,8 +227,8 @@ resources:
       type: bearer
     body:
       mimeType: application/graphql
-      text: '{"query":"mutation {\n  register(input: {username: \"tymek\", password:
-        \"1234\"}) {\n    id\n    username\n  }\n}\n"}'
+      text: '{"query":"mutation {\n  register(input: {id: 4, username: \"tymek\",
+        password: \"1234\"}) {\n    id\n    username\n  }\n}\n"}'
     created: 1558186487818
     description: ""
     headers:
@@ -238,7 +238,7 @@ resources:
     isPrivate: false
     metaSortKey: -1555779604762
     method: POST
-    modified: 1558186706728
+    modified: 1558256641245
     name: v2/register
     parameters: []
     parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
@@ -256,7 +256,7 @@ resources:
       type: bearer
     body:
       mimeType: application/graphql
-      text: '{"query":"mutation {\n  tokenAuth (username: \"kazik\", password:
+      text: '{"query":"mutation {\n  tokenAuth (username: \"tymek\", password:
         \"1234\") {\n    \ttoken\n    }\n  }\n"}'
     created: 1558186535779
     description: ""
@@ -267,7 +267,7 @@ resources:
     isPrivate: false
     metaSortKey: -1555779604749.5
     method: POST
-    modified: 1558186548805
+    modified: 1558256646917
     name: v2/login
     parameters: []
     parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
@@ -296,7 +296,7 @@ resources:
     isPrivate: false
     metaSortKey: -1555779604737
     method: POST
-    modified: 1558183615189
+    modified: 1558279508809
     name: v2/all-users
     parameters: []
     parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
@@ -356,18 +356,18 @@ resources:
     cookies:
       - creation: 2019-04-20T17:03:46.690Z
         domain: 127.0.0.1
-        expires: 2020-05-16T13:38:13.000Z
+        expires: 2020-05-17T15:24:45.000Z
         extensions:
           - SameSite=Lax
         hostOnly: true
-        id: "2997769915502817"
+        id: "2097052855090744"
         key: csrftoken
-        lastAccessed: 2019-05-18T13:38:13.731Z
+        lastAccessed: 2019-05-19T15:24:45.809Z
         maxAge: 31449600
         path: /
         value: hMtTe7mZ6osAfjfyWHJlka41AQ0Sgr4JJRWp6z8foWoh5GEHOi9I8PNUmd8UQSYE
     created: 1555778397824
-    modified: 1558186693731
+    modified: 1558279485809
     name: Default Jar
     parentId: wrk_5ec86768442e4fae8b11e3b1027dde62
     _type: cookie_jar

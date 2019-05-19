@@ -30,7 +30,8 @@ INSTALLED_APPS = [
     'v1',
     'v2',
 
-    'graphene_django'
+    'graphene_django',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
