@@ -15,10 +15,10 @@
 * `virtualenv -p python3.7 venv`
 * `source venv/bin/activate`
 * `pip install -r requirements.txt`
-* `./manage.py migrate` (optional to populate db with some data)
+* `./manage.py migrate`
 * `./manage.py loaddata sampledb` (optional to populate db with some data)
 * `./manage.py runserver`
-* user to login is seba:1234 (all users have password `1234`)
+* user to login is `seba:1234` (all users have password `1234`)
 
 #### Project parts:
 * v1 => simple GraphQL
